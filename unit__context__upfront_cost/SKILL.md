@@ -1,6 +1,6 @@
 ---
 name: unit__context__upfront_cost
-description: Keep the default skill dir lean - high-usage only, short descriptions, manual flows
+description: Trim upfront context cost of the default skill dir.
 ---
 
 ## I/O
@@ -16,13 +16,10 @@ description: Keep the default skill dir lean - high-usage only, short descriptio
 
 Skills in default skill dir == upfront context cost
 
-Skill types: `unit` = one unit. `set` = multiple units. `flow` = units plus sets.
-
 ```text
 private_skills
 |
 |-- core__unit_skills
-|-- core__set_skills
 |-- core__flow_skills
 |
 |-- task__unit_skills
@@ -33,4 +30,4 @@ private_skills
 
 - Include only high-usage skills in default skill dir.
 - A description is a relevance gate, not a summary. Keep it minimal.
-- Invoke flow skills manually — they carry `unit`/`set` names and paths, making unit descriptions redundant.
+- Invoke flow skills manually — they carry `unit` names and paths, making unit descriptions redundant.
