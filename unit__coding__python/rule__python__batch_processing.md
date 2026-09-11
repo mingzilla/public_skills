@@ -16,7 +16,7 @@ For batch data processing with large datasets (50GB+, millions of records), use 
 Extract,Transform,Load (Pseudocode):
 
 ```text
-# SimpleTimer - {PROJECT_ROOT}/src/shared_utils/external/operation_logging/simple_timer.py
+# SimpleTimer - from this skill's shared_utils/ -> {PROJECT_ROOT}/src/shared_utils/external/operation_logging/simple_timer.py
 with SimpleTimer("Performance: Overall") as overall_timer:
     overall_timer.track('overall__setup')
     # Calculate total_chunks based on total_processing_limit / sorted_in_ram_buffer_limit

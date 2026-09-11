@@ -56,6 +56,24 @@ If sh script involves logic and config, the entry needs 3 files:
 - py - logic (can call other files)
 - config.json - all cli params and envvars
 
+## Directory traversal - symlinked dirs
+
+[WHEN] scanning a tree that may hold symlinked directories, [USE] a method that follows them.
+
+| Method | Descends into a symlinked dir |
+|---|---|
+| `glob.glob("*/config.json")` | yes |
+| `Path.glob("*/config.json")` | yes |
+| `os.listdir` + `os.path.isdir` | yes |
+| `os.scandir` + `entry.is_dir()` | yes |
+| `os.walk(path, followlinks=True)` | yes |
+| `os.walk(path)` - default | NO |
+| `Path.rglob("config.json")` | NO |
+
+- `os.walk` defaults to `followlinks=False`. Recursive globs (`rglob`, `**`) never descend into symlinked dirs (Python 3.12; `recurse_symlinks` does not exist before 3.13).
+- `entry.is_dir(follow_symlinks=False)` reports a symlinked dir as not a dir.
+- The failure is silent - zero results, no error. [NEVER] assume a walk covered symlinked content without testing it.
+
 ## Services
 
 - ALWAYS write services in class format with methods
