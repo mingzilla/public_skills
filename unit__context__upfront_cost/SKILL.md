@@ -18,6 +18,17 @@ Skills in default skill dir == upfront context cost
 
 Skill types: `unit` = one unit. `set` = multiple units. `flow` = units plus sets.
 
+```text
+private_skills
+|
+|-- core__unit_skills
+|-- core__set_skills
+|-- core__flow_skills
+|
+|-- task__unit_skills
+|-- task__flow_skills
+```
+
 ## Rules
 
 - Include only high-usage skills in default skill dir.

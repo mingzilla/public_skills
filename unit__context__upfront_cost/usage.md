@@ -3,6 +3,7 @@
 ## Usage
 
 > - Usage: Apply `unit__context__upfront_cost` skill to a default skill dir
+> - Benefit: Avoid harness e.g. claude code to waste a ton of tokens to load skills at start time
 
 ## Why should I care?
 
