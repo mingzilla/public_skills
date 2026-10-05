@@ -1,6 +1,6 @@
 ---
 name: unit__coding__sh
-description: sh coding rules — patterns, conventions, and anti-patterns to follow
+description: sh coding rules - patterns, conventions, and anti-patterns to follow
 ---
 
 ## I/O
@@ -33,3 +33,7 @@ Add suitable entry root (adapt surrounding code convention) to allow running cod
 #!/bin/bash
 cd "$(dirname "$0")/../.."  # suitable entry root
 ```
+
+## Rules
+
+- [ALWAYS] avoid comments if not absolutely required. If it's a decision/reasoning for a skill, put into `<my_skill>/_meta/decision.md`. If not, avoid.
