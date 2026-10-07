@@ -1,4 +1,4 @@
-> labels: Harness, Diagram
+> labels: Harness, Unit, Diagram
 
 ## Usage
 
