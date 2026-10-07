@@ -13,12 +13,10 @@ description: Minimize rule files while preserving meaning and unambiguity
 
 ## Rule
 
-Given a rule file, or a user's description of a rule, produce a version that:
+Given a rule file, or a user's description of a rule, produce a version that is:
 
-- Has the same meaning
-- Is 100% unambiguous
-- Has fewer lines and words than the original
+- **Shorter** - keep only what is needed to apply the rule correctly.
+- **Better** - same meaning, better written.
+- **Unambiguous** - a reader cannot misread it.
 
-Keep only what is necessary to apply the rules correctly.
-
-If the user's intent is unambiguous, make your output shorter than the user message.
+When the user's intent is unambiguous, output must be shorter than the input.
